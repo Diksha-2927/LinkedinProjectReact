@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed | LinkedIn</title>
+    <link rel="icon" href="https://static.licdn.com/sc/h/akt4ae504epesldzj74dzred8">
+    <link rel="stylesheet" href="HomePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- fontfamily -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="25august.html">
+                <img src="logo.png" class="logo">
+            </a>
+            <div class="search-box">
+                <img src="search.png">
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+        <div class="navbar-center">
+            <ul>
+                <li><a href="" class="active-link"><img src="home.png"><span>Home</span></a></li>
+                <li><a href=""><img src="network.png"><span>My Network</span></a></li>
+                <li><a href=""><img src="jobs.png"><span>Jobs</span></a></li>
+                <li><a href=""><img src="message.png"><span>Messaging</span></a></li>
+                <li><a href=""><img src="notification.png"><span>Notification</span></a></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <div class="online">
+                <img src="demla2.jpeg"
+                    class="nav-profile-img" onclick="toggleMenu()">
+            </div>
+        </div>
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img
+                        src="demla2.jpeg">
+                    <div>
+                        <h3>Diksha Demla</h3>
+                        <a href="profile.html">See Your Proflie</a>
+                    </div>
+                </div>
+                <hr>
+                <a href="" class="profile-menu-link">
+                    <img src="feedback.png">
+                    <p>Give Feedback</p>
+                    <span>></span>
+                </a>
+                <a href="" class="profile-menu-link">
+                    <img src="setting.png">
+                    <p>Settings and Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="" class="profile-menu-link">
+                    <img src="help.png">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="" class="profile-menu-link">
+                    <img src="display.png">
+                    <p>Display & Accesebility</p>
+                    <span>></span>
+                </a>
+                <a href="https://www.linkedin.com/in/diksha-demla-b87251294/" class="profile-menu-link" target="_blank">
+                    <img src="logout.png">
+                    <p>Log Out</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar ended -->
+    <!-- --popup -->
+    <div class="popup-container" id="popup">
+        <div class="header">
+            <img src="logo.png">
+            <h1>Welcome to LinkedIn</h1>
+        </div>
+        <div class="input-field">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname">
+        </div>
+        <div class="input-field">
+            <label for="userImg">User Image:</label>
+            <input type="file" id="userImgInput">
+        </div>
+        <div class="input-field">
+            <label for="descofuser">Description About User:</label>
+            <input type="text" id="descofuser">
+        </div>
+        <div class="input-field">
+            <label for="descofpost">Description Of Post:</label>
+            <input type="text" id="descofpost">
+        </div>
+        <div class="input-field">
+            <label for="imgofpost">Image used in Post:</label>
+            <input type="file" id="imgofpostInput">
+        </div>
+        <div class="buttons-container">
+            <button onclick="popup()">Discard</button>
+            <button onclick="add()">Post</button>
+        </div>
+    </div>
+    <!-- --popup ended-->
+    <div class="container">
+        <div class="left-sidebar">
+            <div class="sidebar-profile-box">
+                <img src="https://images.squarespace-cdn.com/content/v1/5fcd81855895864d895087ac/071f1059-36d1-4372-9fb0-d1ef75ba1308/Toronto-linkedin-banner+(4)+(1).jpg"
+                    width="100%" class="cover-img">
+                <div class="sidebar-profile-info">
+                    <img
+                        src="demla2.jpeg">
+                    <h1>Diksha Demla</h1>
+                    <h3>Student at Chitkara University</h3>
+                    <ul>
+                        <li>Your Profile Views<span>100</span></li>
+                        <li>Your Post Views<span>370</span></li>
+                        <li>Your Connections<span>1K</span></li>
+                    </ul>
+                </div>
+                <div class="sidebar-profile-link">
+                    <a href=""><img src="item.png">My Items</a>
+                    <a href=""><img src="premium.png">Try Premium</a>
+                </div>
+            </div>
+            <div class="sidebar-activity" id="sidebarActivity">
+                <h3>RECENT</h3>
+                <a href=""><img src="recent.png">Web Development</a>
+                <a href=""><img src="recent.png">User Interface</a>
+                <a href=""><img src="recent.png">Online Learning</a>
+                <a href=""><img src="recent.png">Learn Online</a>
+                <a href=""><img src="recent.png">Code Better</a>
+                <a href=""><img src="recent.png">Group Learning</a>
+                <h3>GROUPS</h3>
+                <a href=""><img src="group.png">Saylani Mass It Tranining</a>
+                <a href=""><img src="group.png">The Perfect Dev</a>
+                <a href=""><img src="group.png">Techno Kids</a>
+                <a href=""><img src="group.png">Web and App Development</a>
+                <h3>HASHTAGS</h3>
+                <a href=""><img src="hashtag.png">webdevelopment</a>
+                <a href=""><img src="hashtag.png">letsconnect!</a>
+                <a href=""><img src="hashtag.png">pakistanzindabad</a>
+                <div class="discover-more-link">
+                    <a href="">Discover More</a>
+                </div>
+            </div>
+            <p id="showMoreLink" onclick="showSideBar()">Show More <b>+</b></p>
+        </div>
+        <div class="main-content" id="main">
+            <div class="create-post">
+                <div class="create-post-input">
+                    <img
+                        src="demla2.jpeg">
+                    <textarea placeholder="Start a Post"></textarea>
+                </div>
+                <div class="create-post-links">
+                    <li><img src="photo.png">Photo</li>
+                    <li><img src="video.png">Video</li>
+                    <li><img src="event.png">Event</li>
+                    <li onclick="popup()">Post</li>
+                </div>
+            </div>
+            <div class="sort-by">
+                <hr>
+                <p>Sort By: <span>Top <img src="down-arrow.png" alt=""></span></p>
+            </div>
+            <!-- allposts -->
+            <div class="post">
+                <div class="post-author">
+                    <img
+                        src="https://media.licdn.com/dms/image/v2/D4D03AQF_J9TpS5XzCA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725447677736?e=1732752000&v=beta&t=KbCQHF0rhnMoJWoIVkbPzsgfIYZjnswhoCqWzzB3wwQ">
+                    <div>
+                        <h1>Shahzaib Kesrani 🌟 Front-End
+                            Developer &middot; <span style="font-weight: lighter;">1st</span></h1>
+                        <small>Web Developer | Free-Lancer</small>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+                <p>🕌✨ Jummah Mubarak! May this blessed day bring you serenity, spiritual upliftment, and abundant
+                    blessings. Take a moment to pause, reflect, and offer heartfelt prayers. Wishing you a fulfilling
+                    Jummah experience. 🙏🌙</p>
+                <img src="https://media.licdn.com/dms/image/v2/D4D22AQFEC44VjHM_cQ/feedshare-shrink_800/feedshare-shrink_800/0/1727348370739?e=1730332800&v=beta&t=f1pRhRXUVAP4ieHM9SGo9VKgtarEc-pFhYhrNQhomCs"
+                    width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="\html css practice\images\thumbsup.png">
+                        <img src="\html css practice\images\love.png">
+                        <img src="\html css practice\images\clap.png">
+                        <span class="liked-users">Zeeshan Khan and 73 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 24 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="https://media.licdn.com/dms/image/v2/D4D22AQGvITp67phjYA/feedshare-shrink_800/feedshare-shrink_800/0/1727247437668?e=1730332800&v=beta&t=0wlKfGLzhWmC6IyPMtc1ibN73gnLDgj3NSfN39C9-PM"
+                            class="post-activity-user-icon">
+                        <img src="down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <button id="likeBtn">👍 Like</button>
+                        <!-- <img src="\html css practice\images\like.png" class="post-activity-user-icon"> -->
+                        <!-- <span>Like</span> -->
+                    </div>
+                    <div class="post-activity-link">
+                        <button id="commentBtn">💬 Comment</button>
+                        <!-- <img src="\html css practice\images\comment.png" class="post-activity-user-icon"> -->
+                        <!-- <span>Comment</span> -->
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\share.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div>
+                </div>
+                <div class="post">
+                    <!-- <div class="post-author">
+                        <img src="https://media.licdn.com/dms/image/D4D03AQG9dQzt580MIQ/profile-displayphoto-shrink_200_200/0/1684843718143?e=1690416000&v=beta&t=8ja5lyCxG_eG3XW2T30dWggazOJGQvtGJeNKidD0g40">
+                        <div>
+                            <h3>Ms. Hina Iqbal · <span style="font-weight: lighter;">3rd+</span></h3>
+                            <small>Teacher at ETNS/Advocate</small>
+                        </div>
+                    </div>
+                    <p>Begum Nasra Wazir Ali, founder of Nasra Schools had the passion for education and pursuit of excellence which touched thousands of students, teachers, and families. She was able to see the success of her efforts in her living years.</p> -->
+                    <div class="post-activity">
+                        <button id="likeBtn">👍 Like</button> 
+                         <button id="commentBtn">💬 Comment</button> 
+                    </div>
+                    <div id="likeCount">56 likes</div>
+                    <div class="comments" id="commentsSection"></div>
+                    <input type="text" id="commentInput" placeholder="Write a comment...">
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img
+                        src="https://media.licdn.com/dms/image/v2/D5635AQGyQtQgiRv77w/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1729002287812?e=1730228400&v=beta&t=cK7fApLMy2BzLXmKMf98XYiou5460SjBUzkF-cfnQTk">
+                    <div>
+                        <h1>AzaanUllah Khan &middot; <span style="font-weight: lighter;">You</span></h1>
+                        <small>Student at Saylani Mass IT Training, Web & App</small>
+                        <small>5 days ago</small>
+                    </div>
+                </div>
+                <p>Quiz App Made using HTML CSS and JS</p>
+                <video
+                    poster="https://media.licdn.com/dms/image/v2/D5622AQGTVeK63oE0Xg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1727439836845?e=1730332800&v=beta&t=9Fgf10taSnCCmOW8arfUV86_BDk-HzbFoRRlNnFTKRc"
+                    src="https://media.licdn.com/dms/image/v2/D5622AQF4rKVCfkbRzw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1727439836896?e=1730332800&v=beta&t=fDTarOz-DbJDC78-pXcMtsg68bHg7TZxWPOeJRGgNcI"
+                    autoplay="autoplay" width="100%" controls></video>
+                <div class="post-stats">
+                    <div>
+                        <img src="\html css practice\images\thumbsup.png">
+                        <img src="\html css practice\images\love.png">
+                        <img src="\html css practice\images\clap.png">
+                        <span class="liked-users">Shahzaib Kesrani and 12 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 24 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQE_yKNzOY_i-A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1707318531021?e=1735171200&v=beta&t=tFk3WabNTF1H6kuVc98EjhaFlJm8hxif5Go3oJ1TvJw"
+                            class="post-activity-user-icon">
+                        <img src="down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <button id="likeBtn">👍 Like</button>
+                        <!-- <img src="\html css practice\images\like.png" class="post-activity-user-icon"> -->
+                        <!-- <span>Like</span> -->
+                    </div>
+                    <div class="post-activity-link">
+                        <button id="commentBtn">💬 Comment</button>
+                        <!-- <img src="\html css practice\images\comment.png" class="post-activity-user-icon"> -->
+                        <!-- <span>Comment</span> -->
+                    </div>
+
+
+                     <!-- <div class="post-activity-link">
+                        <img src="\html css practice\images\like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>  -->
+                    
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\send.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div>
+                </div>
+                <div class="post">
+                    <!-- <div class="post-author">
+                        <img src="https://media.licdn.com/dms/image/D4D03AQG9dQzt580MIQ/profile-displayphoto-shrink_200_200/0/1684843718143?e=1690416000&v=beta&t=8ja5lyCxG_eG3XW2T30dWggazOJGQvtGJeNKidD0g40">
+                        <div>
+                            <h3>Ms. Hina Iqbal · <span style="font-weight: lighter;">3rd+</span></h3>
+                            <small>Teacher at ETNS/Advocate</small>
+                        </div>
+                    </div>
+                    <p>Begum Nasra Wazir Ali, founder of Nasra Schools had the passion for education and pursuit of excellence which touched thousands of students, teachers, and families. She was able to see the success of her efforts in her living years.</p> -->
+                    <div class="post-activity">
+                        <button id="likeBtn">👍 Like</button> 
+                         <button id="commentBtn">💬 Comment</button> 
+                    </div>
+                    <div id="likeCount">56 likes</div>
+                    <div class="comments" id="commentsSection"></div>
+                    <input type="text" id="commentInput" placeholder="Write a comment...">
+                </div>
+            <!-- </div> -->
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img
+                        src="https://media.licdn.com/dms/image/v2/D4E03AQHxjlrTcq7Hng/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724833336998?e=1732752000&v=beta&t=3Pzmvm5MWmDMW1zTpebKRMVgnnzkuTTOqcU7zl0Dqt0">
+                    <div>
+                        <h1>Mohammad Saad Ali &middot; <span style="font-weight: lighter;">1st</span></h1>
+                        <small>Freelancer at UpWork</small>
+                        <small>18 hours ago</small>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ipsa necessitatibus pariatur
+                    consectetur provident fuga quibusdam tenetur sint molestiae sit vitae recusandae voluptate ab
+                    perferendis placeat eos dignissimos, blanditiis alias.</p>
+                <img src="https://media.licdn.com/dms/image/v2/D4D22AQGoLHSLGRuPhw/feedshare-shrink_1280/feedshare-shrink_1280/0/1726655002396?e=1730332800&v=beta&t=kY1-F4kzLEvfePgPj0zVJJHtdLMcEwLIEtD6y-2OOCo"
+                    width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="\html css practice\images\thumbsup.png">
+                        <img src="\html css practice\images\love.png">
+                        <img src="\html css practice\images\clap.png">
+                        <span class="liked-users">M M Ali and 37 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 24 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQFJXPbjRnh6ew/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718284387801?e=1732752000&v=beta&t=tXBUFgIbFK9KbqsN2bCzp6x8OYz3-mEDsSOwDjiKTJY"
+                            class="post-activity-user-icon">
+                        <img src="down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\send.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div>
+                </div>
+                <div class="post">
+                    <!-- <div class="post-author">
+                        <img src="https://media.licdn.com/dms/image/D4D03AQG9dQzt580MIQ/profile-displayphoto-shrink_200_200/0/1684843718143?e=1690416000&v=beta&t=8ja5lyCxG_eG3XW2T30dWggazOJGQvtGJeNKidD0g40">
+                        <div>
+                            <h3>Ms. Hina Iqbal · <span style="font-weight: lighter;">3rd+</span></h3>
+                            <small>Teacher at ETNS/Advocate</small>
+                        </div>
+                    </div>
+                    <p>Begum Nasra Wazir Ali, founder of Nasra Schools had the passion for education and pursuit of excellence which touched thousands of students, teachers, and families. She was able to see the success of her efforts in her living years.</p> -->
+                    <div class="post-activity">
+                        <button id="likeBtn">👍 Like</button> 
+                         <button id="commentBtn">💬 Comment</button> 
+                    </div>
+                    <div id="likeCount">56 likes</div>
+                    <div class="comments" id="commentsSection"></div>
+                    <input type="text" id="commentInput" placeholder="Write a comment...">
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img
+                        src="https://media.licdn.com/d">
+                    <div>
+                        <h1>Ms. Hina Iqbal &middot; <span style="font-weight: lighter;">3rd+</span></h1>
+                        <small>Teacher at ETNS/Advocate</small>
+                        <small>3w ago</small>
+                    </div>
+                </div>
+                <p>Beautiful poem, written by one of our brilliant Students, Azaan Ullah Khan from grade VIII-B to pay
+                    tribute on TEACHERS.</p>
+                <img src="https://media.licdn.com/dms/image/v2/C4D16AQGn-S2xihJM2A/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1659881094214?e=1732752000&v=beta&t=dKqcDkptsVq63LSzBuHXBcCmt3dW82PRyCOtxw2AZFc"
+                    width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="\html css practice\images\thumbsup.png">
+                        <img src="\html css practice\images\love.png">
+                        <img src="\html css practice\images\clap.png">
+                        <span class="liked-users">Asma Rafiq and 54 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 24 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="https://media.licdn.com/dms/image/v2/C4D16AQGn-S2xihJM2A/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1659881094214?e=1732752000&v=beta&t=dKqcDkptsVq63LSzBuHXBcCmt3dW82PRyCOtxw2AZFc"
+                            class="post-activity-user-icon">
+                        <img src="down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <button id="likeBtn">👍 Like</button>
+                        <!-- <img src="\html css practice\images\like.png" class="post-activity-user-icon"> -->
+                        <!-- <span>Like</span> -->
+                    </div>
+                    <div class="post-activity-link">
+                        <button id="commentBtn">💬 Comment</button>
+                        <!-- <img src="\html css practice\images\comment.png" class="post-activity-user-icon"> -->
+                        <!-- <span>Comment</span> -->
+                    </div>
+                    <!-- <div class="post-activity-link">
+                        <img src="\html css practice\images\like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div> -->
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\send.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div>
+                </div>
+                <div class="post">
+                    <!-- <div class="post-author">
+                        <img src="https://media.licdn.com/dms/image/D4D03AQG9dQzt580MIQ/profile-displayphoto-shrink_200_200/0/1684843718143?e=1690416000&v=beta&t=8ja5lyCxG_eG3XW2T30dWggazOJGQvtGJeNKidD0g40">
+                        <div>
+                            <h3>Ms. Hina Iqbal · <span style="font-weight: lighter;">3rd+</span></h3>
+                            <small>Teacher at ETNS/Advocate</small>
+                        </div>
+                    </div>
+                    <p>Begum Nasra Wazir Ali, founder of Nasra Schools had the passion for education and pursuit of excellence which touched thousands of students, teachers, and families. She was able to see the success of her efforts in her living years.</p> -->
+                    <div class="post-activity">
+                        <button id="likeBtn">👍 Like</button> 
+                         <button id="commentBtn">💬 Comment</button> 
+                    </div>
+                    <div id="likeCount">56 likes</div>
+                    <div class="comments" id="commentsSection"></div>
+                    <input type="text" id="commentInput" placeholder="Write a comment...">
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img
+                        src="https://media.licdn.com/dms/image/v2/D5603AQGsZZdxCZNCzg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1713618769257?e=1732752000&v=beta&t=WJfN5indGXEaq2BC2I2Z7Ts7HDkEKwHNBus0534NsKE">
+                    <div>
+                        <h1>Saylani Mass IT Training Program &middot; <span style="font-weight: lighter;">Following</span></h1>
+                        <small>Offering Free Of Cost Latest IT Training</small>
+                        <small>5 min ago</small>
+                    </div>
+                </div>
+                <p>Dear Pakistani Kids (Both Girls & Boys),
+                    Here Comes Another Opportunity for all of you in this Summer vacations!!
+                    We are offering this online course to school-going kids to educate them about upcoming worldwide
+                    technologies.</p>
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQFB3lFvL3dDtQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1726298671386?e=1730332800&v=beta&t=3OwTDNrLLOvBA4wi-h1HuPU-h6W0EH6qkcAy4_EluOY"
+                    width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="\html css practice\images\thumbsup.png">
+                        <img src="\html css practice\images\love.png">
+                        <img src="\html css practice\images\clap.png">
+                        <span class="liked-users">Faisal Bhatti and 75 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 24 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="https://media.licdn.com/dms/image/v2/D5622AQGZ3Qhd_F2sGQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1727361161858?e=1730332800&v=beta&t=e4BxAuuYZVqlUNcjLsNGXvogJKg7GEw0Voapf118Re8"
+                            class="post-activity-user-icon">
+                        <img src="down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\send.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img
+                        src="https://media.licdn.com/dms/image/v2/D5603AQHCvfaECx1YqQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1722491297598?e=1735171200&v=beta&t=BLc1NRMpnIlVMyB05hRjQ0RfLjmYj7PD3VCR67XZmMc">
+                    <div>
+                        <h1>Ms. Hina  &middot; <span style="font-weight: lighter;">3rd+</span></h1>
+                        <small>Teacher at ETNS/Advocate</small>
+                        <small>3min ago</small>
+                    </div>
+                </div>
+                <p>In the world of careers, your personal brand is your unique calling card, just like a business card.
+
+                    Having personally navigated the challenges of coming from a Tier 3 college, I intimately understand the concerns surrounding brand recognition. Today, my passion is to empower and mentor others on the path to building a formidable personal brand that not only bridges gaps but also unlocks doors to exciting opportunities. Let's work together to shape your career narrative and reach new heights!</p>
+                    <img src="https://www.linkedin.com/company/indmoney/posts?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3Bl0%2B7%2FSW9Tm2vL2A7PEH0Ug%3D%3D" width:100>
+        
+                    <!-- poster="https://www.linkedin.com/company/indmoney/posts?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3Bl0%2B7%2FSW9Tm2vL2A7PEH0Ug%3D%3D"
+                    src="https://dms.licdn.com/playlist/vid/D4D05AQGbb1NdwW_lFg/mp4-720p-30fp-crf28/0/1685265966553?e=1685883600&amp;v=beta&amp;t=d3M-PHqXtS9W3d6o2kHRPQm7WIoOu6-TEOfScClnVvQ"
+                    width="100%" controls></video>  -->
+                <div class="post-stats">
+                    <div>
+                        <img src="\html css practice\images\thumbsup.png">
+                        <img src="\html css practice\images\love.png">
+                        <img src="\html css practice\images\clap.png">
+                        <span class="liked-users">Sofi and 72 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 24 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <!-- <img src="https://media.licdn.com/dms/image/v2/D4D22AQEfHDJVSf1sNA/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1729687557656?e=1732752000&v=beta&t=K4uqX26XPPgWmrYT31_fQ9Kv4RCSWwIyMnADkLXcD-I" width="100%"
+                            class="post-activity-user-icon"> -->
+                        <img src="down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\send.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img
+                        src="https://media.licdn.com/dms/image/v2/C4E03AQFzzW7o_mF1Bg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517404872485?e=1735171200&v=beta&t=898rOeV6E6qP8jQXhgzd1xv2wrXrSBLomGmk1A-wVnY">
+                    <div>
+                        <h1>Shahzaib Kesrani 🌟 Front-End
+                            Developer &middot; <span style="font-weight: lighter;">1st</span></h1>
+                        <small>Web Developer | Free-Lancer</small>
+                        <small>5 days ago</small>
+                    </div>
+                </div>
+                <p>Did you know that as a front-end developer, You have the incredible opportunity to shape the digital
+                    experiences we encounter every day? 🌐💻</p>
+                <img src="https://media.licdn.com/dms/image/v2/D4D22AQGs2E1kByZXKQ/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1723558257367?e=1732752000&v=beta&t=9H2mSMcBLIeNz_FUIAxEn6MotI1TDqPvaVe9iAsqJX0"
+                    width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="\html css practice\images\thumbsup.png">
+                        <img src="\html css practice\images\love.png">
+                        <img src="\html css practice\images\clap.png">
+                        <span class="liked-users">Joshua Akentemi and 73 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 24 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQGMfsD66Vk6iA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1697296250385?e=1735171200&v=beta&t=XjYf9RNLTBfUx7SoQsIIofdiSnEtPWCd03kSbpparHc"
+                            class="post-activity-user-icon">
+                        <img src="down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+                   
+            <div class="post">
+                <div class="post-author">
+                    <img
+                        src="https://media.licdn.com/dms/image/v2/C5603AQFXJK-diIdz9Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1616069758627?e=1735171200&v=beta&t=jW7AWdEvaxIH4jVhEIiUAMmbc6xrtyjdwfvOzVO8TSA">
+                    <div>
+                        <h1>Adam Karpeik &middot; <span style="font-weight: lighter;">2nd</span></h1>
+                        <small>Opinionated Recruiter</small>
+                        <small>1w ago</small>
+                    </div>
+                </div>
+                <p>Fair is Fair</p>
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQH19Z25vaSkEw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729534258124?e=1735171200&v=beta&t=1NI_2CiCPsmCS9illbdld-7lQGQu4W73lOOQWJeFK-8"
+                    width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="\html css practice\images\thumbsup.png">
+                        <img src="\html css practice\images\love.png">
+                        <img src="\html css practice\images\clap.png">
+                        <span class="liked-users">Khizar Wakeel and 73 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 24 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQH19Z25vaSkEw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729534258124?e=1735171200&v=beta&t=1NI_2CiCPsmCS9illbdld-7lQGQu4W73lOOQWJeFK-8"
+                            class="post-activity-user-icon">
+                        <img src="down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <!-- <div class="post-activity-link">
+                        <img src="like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="send.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div> -->
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\send.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="post">
+                <div class="post-author">
+                    <img
+                        src="https://media.licdn.com/dms/image/v2/D5603AQH19Z25vaSkEw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729534258124?e=1735171200&v=beta&t=1NI_2CiCPsmCS9illbdld-7lQGQu4W73lOOQWJeFK-8">
+                    <div>
+                        <h1>Startup Pakistan &middot; <span style="font-weight: lighter;">Following</span></h1>
+                        <small>458,015</small>
+                        <small>1d ago &middot; Edited</small>
+                    </div>
+                </div>
+                <p>Former Prime Minister Imran Khan's recent Facebook post has become incredibly popular in Pakistan. In
+                    the post, he expresses how much he misses hiking in the beautiful mountains of northern Pakistan
+                    with his sons. Within just 24 hours, the post received a remarkable response, with 769K likes, 70K
+                    comments, and 18K shares.</p>
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQH19Z25vaSkEw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729534258124?e=1735171200&v=beta&t=1NI_2CiCPsmCS9illbdld-7lQGQu4W73lOOQWJeFK-8"
+                    width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="\html css practice\images\thumbsup.png">
+                        <img src="\html css practice\images\love.png">
+                        <img src="\html css practice\images\clap.png">
+                        <span class="liked-users">Rizwan Bhatti and 43 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 24 shares</span>
+                    </div>
+                </div> -->
+                <!-- <div class="post-activity">
+                    <div>
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQH19Z25vaSkEw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729534258124?e=1735171200&v=beta&t=1NI_2CiCPsmCS9illbdld-7lQGQu4W73lOOQWJeFK-8"
+                            class="post-activity-user-icon">
+                        <img src="down-arrow.png" class="post-activity-arrow-icon"> -->
+                    <!-- </div> -->
+                    <!-- <div class="post-activity-link">
+                        <img src="like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="send.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div> -->
+                    <!-- <div class="post-activity-link">
+                        <img src="\html css practice\images\like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\send.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+          -->
+                    <!-- <div class="post-activity-link">
+                        <img src="like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="send.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div> -->
+                    
+            <!-- <div class="post">
+                <div class="post-author">
+                    <img
+                        src="https://media.licdn.com/dms/image/D4D35AQHx5iDiSeufWw/profile-framedphoto-shrink_200_200/0/1684309117813?e=1685905200&v=beta&t=yd6rAjWw2fUc3zZHGxwzQUEhJv32Mmz0I49BpucRfgw">
+                    <div>
+                        <h1>Aruoj Fatima &middot; <span style="font-weight: lighter;">3rd+</span></h1>
+                        <small>Help 1000+ Candidates to secure Job</small>
+                        <small>1y ago</small>
+                    </div>
+                </div>
+                <p>Office politics can have detrimental consequences for hardworking employees' careers.</p>
+                <img src="https://media.licdn.com/dms/image/D4D22AQF8ZKzc9SA8DQ/feedshare-shrink_800/0/1685095070450?e=1687996800&v=beta&t=AFtTzgUwasZzXGajrOx4w1RthCstUuTBTCJrXW1SpqQ"
+                    width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="\html css practice\images\thumbsup.png">
+                        <img src="\html css practice\images\love.png">
+                        <img src="\html css practice\images\clap.png">
+                        <span class="liked-users">Rizwan Bhatti and 43 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 24 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQH19Z25vaSkEw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729534258124?e=1735171200&v=beta&t=1NI_2CiCPsmCS9illbdld-7lQGQu4W73lOOQWJeFK-8"
+                            class="post-activity-user-icon">
+                        <img src="down-arrow.png" class="post-activity-arrow-icon">
+                    </div> -->
+                    <!-- <div class="post-activity-link">
+                        <img src="like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="send.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div> -->
+                    <!-- <div class="post-activity-link">
+                        <img src="\html css practice\images\like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\send.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="post">
+                <div class="post-author">
+                    <img
+                        src="https://media.licdn.com/dms/image/C4D03AQFAd-mjkxexZA/profile-displayphoto-shrink_200_200/0/1644206230306?e=1691020800&v=beta&t=Whe0zJFCwsWuSopak50LJQFUM-AzGrJ8s_ciTIQxsnA">
+                    <div>
+                        <h1>Dmitry Kolpakov &middot; <span style="font-weight: lighter;">3rd+</span></h1>
+                        <small>Back-End-Developer (PHP / SQL)</small>
+                        <small>8h ago</small>
+                    </div>
+                </div>
+                <p>JAVASCRIPT ARRAY METHODS</p>
+                <img src="https://media.licdn.com/dms/image/D5622AQGkNmlDtjrYKA/feedshare-shrink_800/0/1683683216495?e=1687996800&v=beta&t=ee1Rr--144f-lEfK1bcO7DC1P_ExDwkHtrLsLPseaTE"
+                    width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="thumbsup.png">
+                        <img src="love.png">
+                        <img src="clap.png">
+                        <span class="liked-users">Rizwan Bhatti and 43 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 24 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="https://media.licdn.com/dms/image/D4D03AQHyJrtE6WbAfw/profile-displayphoto-shrink_100_100/0/1678030659122?e=1690416000&v=beta&t=9Vnws7rVjaREQebj3HeuNH3GQ_VS0XS4XFnkI5ttBpQ"
+                            class="post-activity-user-icon">
+                        <img src="down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="send.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                       
+                    </div>
+                </div>
+            </div> -->
+           
+              
+                    <!-- <div class="post-activity-link">
+                        <img src="like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="send.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div> -->
+                   
+            <div class="post">
+                <div class="post-author">
+                    <img
+                        src="https://media.licdn.com/dms/image/v2/D5603AQHe83Ujd5ymgw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1726466712903?e=1735171200&v=beta&t=4YuVyII6rMH1XZMhlk0o7CuNNvz6i5izRvzkGyFk7xY">
+                    <div>
+                        <h1>Muhammad Rafi Khan &middot; <span style="font-weight: lighter;">3rd+</span></h1>
+                        <small>🚀SEO Specialist | 🔍Consultant | 🎯Freelancer</small>
+                        <small>2w ago</small>
+                    </div>
+                </div>
+                <p>Topic: What is SEO?<br />Read Complete Blog: <span
+                        style="color: #045be6; font-weight: bold;">https://lnkd.in/dW8SDnqk</span></p>
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQETnk2LeLVBIA/feedshare-shrink_1280/feedshare-shrink_1280/0/1725453955473?e=1732752000&v=beta&t=nGZYjI-7I-VcsYSMGYLeQyJpzSLT7yq3HziwSoOQ1Lk"
+                    width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="\html css practice\images\thumbsup.png">
+                        <img src="\html css practice\images\love.png">
+                        <img src="\html css practice\images\clap.png">
+                        <span class="liked-users">Rizwan Bhatti and 43 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 24 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQH19Z25vaSkEw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729534258124?e=1735171200&v=beta&t=1NI_2CiCPsmCS9illbdld-7lQGQu4W73lOOQWJeFK-8"
+                            class="post-activity-user-icon">
+                        <img src="down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\send.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img
+                        src="https://media.licdn.com/dms/image/v2/D5603AQFjFeu1C8wrWQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1707934530370?e=1735171200&v=beta&t=21nkBMjYZGCS7UF3Vmds6V7yuUW11xzQeNB1cmt7hYU">
+                    <div>
+                        <h1>Startup Pakistan &middot; <span style="font-weight: lighter;">Folowing</span></h1>
+                        <small>458,015</small>
+                        <small>1d ago &middot; Edited</small>
+                    </div>
+                </div>
+                <p>Read More: <span style="color: #045be6; font-weight: bold;">https://lnkd.in/da3HHEeG</span></p>
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQEDD7fe8J9sFQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1729542829086?e=1732752000&v=beta&t=wLUloIf12PXjW1GPyjOfz07vz65P2UMXiPilktOX1E4"
+                    width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="\html css practice\images\thumbsup.png">
+                        <img src="\html css practice\images\love.png">
+                        <img src="\html css practice\images\clap.png">
+                        <span class="liked-users">Rizwan Bhatti and 43 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 24 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQH19Z25vaSkEw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729534258124?e=1735171200&v=beta&t=1NI_2CiCPsmCS9illbdld-7lQGQu4W73lOOQWJeFK-8"
+                            class="post-activity-user-icon">
+                        <img src="down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <!-- <div class="post-activity-link">
+                        <img src="like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="send.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div> -->
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\send.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img
+                        src="https://media.licdn.com/dms/image/v2/C4E03AQHHRUa7INkpBg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1617614587438?e=1735171200&v=beta&t=b4r92-dg3a2YTUMq8dZ1Wj7cxL_RVtpEKaSVnrJEYU4">
+                    <div>
+                        <h1>Ajay Suneja &middot; <span style="font-weight: lighter;">3rd+</span></h1>
+                        <small>Software Engineer at @adidas</small>
+                        <small>1w ago </small>
+                    </div>
+                </div>
+                <p>How to Handle Multiple Job Offers With HR 💼Salary Negotiation , 90 Days Notice Period ~My Experience
+                </p>
+                <img src="https://media.licdn.com/dms/image/v2/D4D22AQExgvj_orrYzA/feedshare-shrink_1280/feedshare-shrink_1280/0/1728895426380?e=1732752000&v=beta&t=iX7ibVug8KkuptHp76JFV1B51bceGzrJITBeNVDgURY"
+                    width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="\html css practice\images\thumbsup.png">
+                        <img src="\html css practice\images\love.png">
+                        <img src="\html css practice\images\clap.png">
+                        <span class="liked-users">Rizwan Bhatti and 43 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 24 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQH19Z25vaSkEw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729534258124?e=1735171200&v=beta&t=1NI_2CiCPsmCS9illbdld-7lQGQu4W73lOOQWJeFK-8"
+                            class="post-activity-user-icon">
+                        <img src="down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\send.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="post">
+                <div class="post-author">
+                    <img
+                        src="https://media.licdn.com/dms/image/v2/C4E03AQHHRUa7INkpBg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1617614587438?e=1735171200&v=beta&t=b4r92-dg3a2YTUMq8dZ1Wj7cxL_RVtpEKaSVnrJEYU4">
+                        <h1>Rafay Waqar &middot; <span style="font-weight: lighter;">2nd</span></h1>
+                        <small>Head of SEO Department</small>
+                        <small>1w ago</small>
+                    </div>
+                </div>
+                <p>Google introduce Ads Transparancy Center where you can easily spy your competitors display ads.
+                    🙊😉</p>
+                <video muted="muted"
+                    poster="https://media.licdn.com/dms/image/D4D05AQHlBQdu0nX53g/feedshare-thumbnail_720_1280/0/1684147890360?e=1685959200&amp;v=beta&amp;t=lK7GGSglbC8ME5rY2e35Ssdh7ZeQUrY3_CTW3aD7Qgo"
+                    src="https://dms.licdn.com/playlist/vid/D4D05AQHlBQdu0nX53g/mp4-720p-30fp-crf28/0/1684147895566?e=1685959200&amp;v=beta&amp;t=sBI-StKZHccbEn2oCXYPL1wxET41O69s3-1o2g5VtcQ"
+                    autoplay="autoplay" width="100%" controls></video>
+                <div class="post-stats">
+                    <div>
+                        <img src="\html css practice\images\thumbsup.png">
+                        <img src="\html css practice\images\love.png">
+                        <img src="\html css practice\images\clap.png">
+                        <span class="liked-users">Rizwan Bhatti and 43 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 24 shares</span>
+                    </div>
+                </div>
+            </div> -->
+            <div class="post">
+                <div class="post-author">
+                    <img
+                        src="https://media.licdn.com/dms/image/v2/C560BAQE88xCsONDULQ/company-logo_200_200/company-logo_200_200/0/1630652622688/microsoft_logo?e=1737590400&v=beta&t=tuZlBreZfywCgz0Xgmgk0f2wJXSRxbkYznsPBIfvkBk" style="border-radius: 0;">
+                    <div>
+                        <h1>Microsoft</h1>
+                        <small>19,833,729 Followers</small>
+                        <small>Promoted</small>
+                    </div>
+                </div>
+                <p>We're infusing AI across every layer of the tech stack. Satya Nadella shares five top announcements from #MSBuild to empower developers.
+                    </p>
+                    <!-- <video muted="muted" poster="https://media.licdn.com/dms/image/D5605AQGjjvJ-oZ3Ukg/feedshare-thumbnail_720_1280/0/1684960329911?e=1685959200&amp;v=beta&amp;t=GEPoxVD4z0CSqaSlQjbemUsQIsBA51PwrvquDROMD0E" src="https://dms.licdn.com/playlist/vid/D5605AQGjjvJ-oZ3Ukg/mp4-720p-30fp-crf28/0/1684960402534?e=1685959200&amp;v=beta&amp;t=mo1N6K_ePsQJdfCH4bFpSKRUqjx6JgMUXbsOrazuBNc" autoplay="autoplay" controls width="100%"></video> --> 
+                    <video width="600" controls>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/S7xTBa93TX8?si=WN4XM2m_He_i8rMq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <!-- <source src="https://www.youtube.com/watch?v=S7xTBa93TX8" type="video/mp4"> -->
+                        Your browser does not support the video tag.
+                    </video>
+                
+                <div class="post-stats">
+                    <div>
+                        <img src="\html css practice\images\thumbsup.png">
+                        <img src="\html css practice\images\love.png">
+                        <img src="\html css practice\images\clap.png">
+                        <span class="liked-users">Rizwan Bhatti and 43 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 24 shares</span>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img
+                        src="https://media.licdn.com/dms/image/v2/C5603AQFXJK-diIdz9Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1616069758627?e=1735171200&v=beta&t=jW7AWdEvaxIH4jVhEIiUAMmbc6xrtyjdwfvOzVO8TSA">
+                    <div>
+                        <h1>Startup Dubai &middot; <span style="font-weight: lighter;">Following</span></h1>
+                        <small>50,096 Followers</small>
+                        <small>13h ago</small>
+                    </div>
+                </div>
+                <p>Indian Prime Minister Narendra Modi, known for his strong Hindu nationalist stance, inaugurated the new parliament building in New Delhi in a grand ceremony. However, the inclusion of the recitation of Surah Rahman, the 55th chapter of the Holy Quran, during the inauguration has sparked controversy due to Modi's contentious history with the Muslim community.</p>
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQEYaysJ_3Wrxg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725135401733?e=1735171200&v=beta&t=W85XGeIFWz8PGRM0h4vghJu-AcfCOF5Dt3tTIJws6o8" width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="\html css practice\images\thumbsup.png">
+                        <img src="\html css practice\images\love.png">
+                        <img src="\html css practice\images\clap.png">
+                        <span class="liked-users">M Sufyan and 72 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 24 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src=""
+                            class="post-activity-user-icon">
+                        <img src="down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <!-- <div class="post-activity-link">
+                        <img src="like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="send.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div> -->
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="\html css practice\images\send.png" class="post-activity-user-icon">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img
+                        src="https://media.licdn.com/dms/image/v2/D5603AQEVuUUbtrWHSw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1728571883574?e=1735171200&v=beta&t=BQOcrsNGv-za3T8wRiTRBXY-ycN7IAyqTN1jldJsj1o">
+                    <div>
+                        <h1>Startup Pakistan &middot; <span style="font-weight: lighter;">Following</span></h1>
+                        <small>458,015</small>
+                        <small>1d ago &middot; Edited</small>
+                    </div>
+                </div>
+                <p>Our Heroes ♥</p>
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQHvIZ5OMAnBbw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1729594432357?e=1732752000&v=beta&t=z4vQBa32luh-0mZEXe6z7toH1rJkVBADLW_y3MIsxWE"
+                    width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="\html css practice\images\thumbsup.png">
+                        <img src="\html css practice\images\love.png">
+                        <img src="\html css practice\images\clap.png">
+                        <span class="liked-users">Rizwan Bhatti and 43 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 24 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQH19Z25vaSkEw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729534258124?e=1735171200&v=beta&t=1NI_2CiCPsmCS9illbdld-7lQGQu4W73lOOQWJeFK-8"
+                            class="post-activity-user-icon">
+                        <img src="down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <!-- <div class="post-activity-link">
+                        <img src="like.png" class="post-activity-user-icon">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="comment.png" class="post-activity-user-icon">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="share.png" class="post-activity-user-icon">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="send.png" class="post-activity-user-icon">
+                        <span>Send</span> -->
+                        <div class="post-activity-link">
+                            <img src="\html css practice\images\like.png" class="post-activity-user-icon">
+                            <span>Like</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="\html css practice\images\comment.png" class="post-activity-user-icon">
+                            <span>Comment</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="\html css practice\images\share.png" class="post-activity-user-icon">
+                            <span>Share</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="\html css practice\images\send.png" class="post-activity-user-icon">
+                            <span>Send</span>
+                        </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="right-sidebar">
+            <div class="sidebar-news">
+                <img src="more.png" class="info-icon">
+                <h3>Trending News</h3>
+                <a href="">High demand for skilled manpower</a>
+                <span>1d ago &middot; 1934 readers</span>
+                <a href="">Carrier growing horizontally too</a>
+                <span>10d ago &middot; 1084 readers</span>
+                <a href="">Less work visa for US, more for UK</a>
+                <span>7h ago &middot; 7980 readers</span>
+                <a href="">More hiring = Higher confidence ?</a>
+                <span>1h ago &middot; 1924 readers</span>
+                <a href="">Saylani has announced batch 4 of Techno Kids</a>
+                <span>8h ago &middot; 1906 readers</span>
+                <a href="" class="read-more-link">Read More</a>
+            </div>
+            <div class="sidebar-ad">
+                <small>AD &middot; &middot; &middot;</small>
+                <p>Master the 5 principles of web design</p>
+                <div>
+                    <img src="https://media.licdn.com/dms/image/D4D03AQHyJrtE6WbAfw/profile-displayphoto-shrink_100_100/0/1678030659122?e=1690416000&v=beta&t=9Vnws7rVjaREQebj3HeuNH3GQ_VS0XS4XFnkI5ttBpQ"
+                        alt="">
+                    <img src="https://media.licdn.com/dms/image/C4D0BAQEBFPcB1s3wrg/company-logo_200_200/0/1675703359239?e=1693440000&v=beta&t=H9M2a8YBEdzm-cXDjYWEJQqIbWpvBWnwJUFD7Zxp4zo" alt="">
+                </div>
+                <b>Share Your Experience With Saylani</b>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7068264850904293377/" class="ad-link" target="_blank">Learn More</a>
+            </div>
+            <div class="sidebar-useful-links">
+                <a href="">About</a>
+                <a href="">Accesibility</a>
+                <a href="">Help Center</a>
+                <a href="">Privacy Policy</a>
+                <a href="">Advertising</a>
+                <a href="">Get the App</a>
+                <a href="">More</a>
+                <div class="copyright-msg">
+                    <img src="logo.png">
+                    <p>AzaanUllah &copy; All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Home.js"></script>
+    <script>
+          let liked = false;
+        let likeCount = 56;
+
+        document.getElementById('likeBtn').addEventListener('click', function() {
+            // liked = !liked;
+            // likeCount += liked ? 1 : -1;
+            // this.textContent = liked ? '👍 Liked' : '👍 Like';
+            // this.classList.toggle('liked');
+            // document.getElementById('likeCount').textContent = `${likeCount} like${likeCount !== 1 ? 's' : ''}`;
+
+            likeCount+=1;
+            document.getElementById('likeCount').textContent =`${likeCount} likes`;
+        });
+
+        document.getElementById('commentInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && this.value.trim() !== '') {
+                const comment = document.createElement('div');
+                comment.className = 'comment';
+                comment.textContent = this.value;
+                document.getElementById('commentsSection').appendChild(comment);
+                this.value = '';
+            }
+        });
+    </script>
+</body>
+
+</html>
